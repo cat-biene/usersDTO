@@ -1,5 +1,6 @@
 package de.ait.users.service;
 
+import de.ait.users.dto.UserRequestDTO;
 import de.ait.users.dto.UserResponseDTO;
 import de.ait.users.model.User;
 
@@ -13,7 +14,7 @@ public interface UserService {
 
     Optional<User> findById(Long id);
 
-    User add(User user);
+    User add(UserRequestDTO user);
 
     void deleteById(Long id);
 }

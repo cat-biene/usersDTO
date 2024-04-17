@@ -1,5 +1,6 @@
 package de.ait.users.controller;
 
+import de.ait.users.dto.UserRequestDTO;
 import de.ait.users.dto.UserResponseDTO;
 import de.ait.users.model.User;
 import de.ait.users.service.UserService;
@@ -42,9 +43,9 @@ public class UserController {
         return service.findById(id).get();
     }
 
-    //@PostMapping("/users")
+//    @PostMapping("/users")
     @PostMapping
-    public void addNewUser(@RequestBody User user) {
+    public void addNewUser(@RequestBody UserRequestDTO user) {
         System.out.println(user);
         service.add(user);
     }

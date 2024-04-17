@@ -3,6 +3,7 @@ package de.ait.users.model;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 @AllArgsConstructor
@@ -12,6 +13,7 @@ import lombok.ToString;
 
 public class User {
     @Schema(description = "user id", example = "234")
+    @Setter
     private Long id;
     @Schema(description = "", example = "eni")
     private String name;

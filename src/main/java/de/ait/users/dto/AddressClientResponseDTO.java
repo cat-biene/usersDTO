@@ -1,7 +1,6 @@
 package de.ait.users.dto;
 
 import de.ait.users.model.Address;
-import de.ait.users.model.User;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 

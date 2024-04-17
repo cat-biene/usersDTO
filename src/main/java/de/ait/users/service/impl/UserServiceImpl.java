@@ -1,5 +1,6 @@
 package de.ait.users.service.impl;
 
+import de.ait.users.dto.UserRequestDTO;
 import de.ait.users.dto.UserResponseDTO;
 import de.ait.users.model.User;
 import de.ait.users.repository.UserRepository;
@@ -45,9 +46,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User add(User user) {
+    public User add(UserRequestDTO user) {
+        User newUser = new User(null, user.getName(), user.getPassword(), user.getEmail(), user.getAge());
 
-        return repository.save(user);
+        User added = repository.save(newUser);
+        return added;
     }
 
     @Override
